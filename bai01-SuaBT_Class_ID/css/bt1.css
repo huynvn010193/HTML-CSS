@@ -1,0 +1,10 @@
+article.tinnho {
+	width: 325px;
+	height: 625px;
+	padding-right: 22px;
+	border: 1px solid #E9E9E9;
+}
+
+article.tinnho img {
+	width: 100%;
+}
