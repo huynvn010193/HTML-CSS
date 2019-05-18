@@ -1,10 +1,32 @@
 article.tinnho {
 	width: 325px;
-	height: 625px;
-	padding-right: 22px;
+	height: 265px;
+	margin-right: 22px;
 	border: 1px solid #E9E9E9;
+	float: left;
 }
 
 article.tinnho img {
 	width: 100%;
+	height: 80%;
+	padding-bottom: 14px;
+}
+
+article.tinnho a.tdtinnho {
+	text-decoration: none;
+	color: #414141;
+	font-family: 'tahoma';
+	font-weight: bold;
+	font-size: 13px;
+	padding-bottom: 34px;
+	display: block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.thongtin {
+	font-family: 'tahoma';
+	font-size: 11px;
+	color:gray;
+	padding: 0px 0px 10px 10px;
 }
