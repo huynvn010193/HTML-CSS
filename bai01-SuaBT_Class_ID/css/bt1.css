@@ -30,3 +30,38 @@ article.tinnho a.tdtinnho {
 	color:gray;
 	padding: 0px 0px 10px 10px;
 }
+
+/* Css cho div to */
+
+article.tinto {
+	width: 650px;
+	margin-bottom: 20px;
+	overflow: hidden; /* Chống tràn chữ lên : làm cho float ko ảnh hưởng đến cá 
+	phần tử khác. 2 cách clear float
+	*/
+}
+
+article.tinto img {
+	width: 441px;
+	float: left;
+	margin-right: 22px;
+}
+
+.phai {
+	font-family: tahoma;
+	font-size: 13px;
+}
+
+.tentg {
+	text-align: center;
+	display: block;
+	color: #414141;
+	font-size: italic;
+}
+
+.tdto {
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	color: #414141;
+}
