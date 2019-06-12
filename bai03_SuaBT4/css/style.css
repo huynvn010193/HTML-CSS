@@ -1,0 +1,40 @@
+div.title {
+	border-bottom: 4px solid orange;
+}
+
+div.title h2 {
+	background: white;
+	position: relative;
+	display:inline-block;
+	top: 33px;
+	left: 35px;
+	padding-left: 10px;
+	padding-right: 20px;
+}
+
+.tin {
+	width: 190px;
+	height: 250px;
+	margin-right: 10px;
+	float: left;
+}
+
+.tin:nth-child(4n) {
+	margin-right: 0px;
+}
+
+.tin img {
+	width: 190px;
+	margin-top: 15px;
+}
+
+.tin a {
+	text-decoration: none;
+	font-family: tohoma;
+	font-size: 13px;
+	color: bold;
+}
+
+.cucto {
+	width: 790px;
+}

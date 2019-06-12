@@ -1,0 +1,1 @@
++ Điểm yếu display: inline => ko hiểu magin-bottom và margin-top. để cho hiểu => display: inline-block.
