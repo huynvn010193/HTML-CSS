@@ -4,6 +4,7 @@
 	margin: auto;
 	background: lightblue;
 	display: flex;
+	flex-direction: column;
 }
 
 .k1 {

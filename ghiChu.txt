@@ -1,4 +1,8 @@
 + Điểm yếu display: inline => ko hiểu magin-bottom và margin-top. để cho hiểu => display: inline-block.
 Flex
 	+ div parent: display: flex || inline-flex;
-	+ div child : Flex-direction: default : row.
+	+ div child : Flex-direction: default : row. => dùng cho thẻ parent.
+		- row: theo hàng từ trái qua phải.
+		- row-reverse : đảo ngược của row.
+		- column : theo cột.
+		- column-reverse: theo cột và đảo ngược.
