@@ -1,0 +1,45 @@
+*{margin:0;padding: 0;}
+a.khoivuongnho {
+	height: 210px;
+	width: 280px;
+	background-color: green;
+	display: block;
+	position: relative;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a.khoivuongnho .player1{
+	width: 280px;
+}
+
+a.khoivuongnho .player2{
+	width: 280px;
+	height: 210px;
+	position: absolute;
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	background-image: -webkit-linear-gradient(top,rgba(255,255,255,0) 50%,rgba(0,0,0,0.61) 100%);
+	overflow: hidden; 
+	/*Những gì nằm ngoài width và height = an di */
+}
+a.khoivuongnho .player2:hover {
+	opacity: 0;
+	transition: 0.4s;	
+}
+a.khoivuongnho .player3 {
+	position: absolute;
+	width: 280px;
+	bottom: -50px;
+	left: 0px;
+	z-index: 3;
+	padding: 8px 13px;
+}
+
+a.khoivuongnho:hover .player3 {
+	bottom: 20px;
+	transition: 0.4s;
+}
