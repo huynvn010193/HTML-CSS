@@ -13,3 +13,5 @@ Flex
 	+ align-items: stretch : theo chiều dọc.
 		- baseline: canh theo chữ. thẳng hàng vs nhau.
 		- flex-start: canh theo khối.
+	+ background-size : cover: để ảnh lun full từng loại màn hình khác nhau.
+	
