@@ -4,6 +4,7 @@ body,html {
   height: 100%;
 }
 
+/*CSS TOP*/
 @font-face {
   font-family: Lato-Regular;
   src: url(./../fonts/Lato-Regular.ttf);
@@ -53,3 +54,29 @@ body,html {
 .top .noidung .nuttop:hover {
   background: none;
 }
+
+/*CSS cho di động*/
+@media (max-width: 576px) {
+  .top{
+    background: url("./../images/bg_didong.jpg") center center;
+    background-size: cover;
+  }
+  .top .noidung .chuto {
+    font-size: 38px;
+  }
+  .top .noidung .nuttop {
+    font-size: 15px;
+    padding: 9px 27px;
+    margin-top: 22px;
+  }
+  .top .noidung .chunho {
+    font-size: 12px;
+    padding: 9px 27px;
+    margin-top: 22px;
+  }
+}
+
+/*END CSS TOP*/
+
+
+
