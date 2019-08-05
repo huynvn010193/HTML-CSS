@@ -80,4 +80,18 @@ body,html {
 
 /*CSS TOP CHO TRANG CONTACT*/
 
+/*=======CSS cho menu ========*/
+.menuphai li.nav-item a.nav-link {
+  font-family: 'Lato-Regular', sans-serif;
+  color:#a1b1bc;
+  font-size: 16px;
+  padding: 1px 24px;
+}
+.menuphai li.nav-item a.nav-link:hover {
+  color: #1abc9c;
+}
+.menuphai li.nav-item.active a.nav-link {
+  color: #1abc9c;
+}
 
+/*=======Hết CSS cho menu ========*/
