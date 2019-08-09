@@ -55,8 +55,27 @@ body,html {
   background: none;
 }
 
-/*CSS cho di động*/
+/*END CSS TOP*/
+
+/*CSS TOP CHO TRANG CONTACT*/
+
+/*=======CSS cho menu ========*/
+.menuphai li.nav-item a.nav-link {
+  font-family: 'Lato-Regular', sans-serif;
+  color:#a1b1bc;
+  font-size: 16px;
+  padding: 42px 24px;
+}
+.menuphai li.nav-item a.nav-link:hover {color: #1abc9c;}
+.menuphai li.nav-item.active a.nav-link {color: #1abc9c;}
+
+
+/*=======Hết CSS cho menu ========*/
+
+/*=======CSS cho di động==========*/
 @media (max-width: 576px) {
+
+  /*============PhanTop==============*/
   .top{
     background: url("./../images/bg_didong.jpg") center center;
     background-size: cover;
@@ -74,24 +93,22 @@ body,html {
     padding: 9px 27px;
     margin-top: 22px;
   }
+  /*============EndTop==============*/
+
+  /*============Menu==============*/
+  .menuphai li.nav-item a.nav-link {
+    font-size: 19px;
+    padding: 16px 24px;
+    border-bottom: 1px dashed gray;
+    text-transform: uppercase;
+    
+  }
+  .menuphai li.nav-item a.nav-link:hover {
+    color: #1abc9c;
+    background: #ececec;
+  }
+  .menuphai li.nav-item.active a.nav-link {color: #1abc9c;}
+  .navbar-brand {text-align: center;}
+  .navbar-brand img {height: 80px; margin-top: -10px}
 }
 
-/*END CSS TOP*/
-
-/*CSS TOP CHO TRANG CONTACT*/
-
-/*=======CSS cho menu ========*/
-.menuphai li.nav-item a.nav-link {
-  font-family: 'Lato-Regular', sans-serif;
-  color:#a1b1bc;
-  font-size: 16px;
-  padding: 1px 24px;
-}
-.menuphai li.nav-item a.nav-link:hover {
-  color: #1abc9c;
-}
-.menuphai li.nav-item.active a.nav-link {
-  color: #1abc9c;
-}
-
-/*=======Hết CSS cho menu ========*/
