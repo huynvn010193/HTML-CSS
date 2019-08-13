@@ -15,6 +15,11 @@ body,html {
   src: url(./../fonts/Lato-Black.ttf);
 }
 
+@font-face {
+  font-family: Lato-Regular-Bold;
+  src: url(./../fonts/Lato-Bold.ttf);
+}
+
 .top {
   background: url("./../images/bg_top.jpg") center center;
   background-size: cover;
@@ -59,7 +64,8 @@ body,html {
 
 /*CSS TOP CHO TRANG CONTACT*/
 
-/*=======CSS cho menu ========*/
+/*TODO: Bắt đầu CSS cho menu ========*/
+
 .menuphai li.nav-item a.nav-link {
   font-family: 'Lato-Regular', sans-serif;
   color:#a1b1bc;
@@ -69,7 +75,42 @@ body,html {
 .menuphai li.nav-item a.nav-link:hover {color: #1abc9c;}
 .menuphai li.nav-item.active a.nav-link {color: #1abc9c;}
 
-/*TODO: Hết CSS cho menu ========*/
+/*======= Hết CSS cho menu ========*/
+
+/*TODO: Bắt đầu CSS phần liên hệ ========*/
+.ttlienhe {
+  background: url(./../images/bg_top.jpg);
+  background-size: cover;
+  height: 600px;
+}
+.ttlienhe .thongtin {
+  margin-top: 190px;
+  background-color: #435566;
+  border-left: 3px solid #16caaa;
+  color: white;
+  padding: 40px;
+}
+.thongtin h1 {
+  font-family: 'Lato-Regular-Bold', sans-serif;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+.thongtin .col-sm-6 {
+  font-family: 'Lato-Regular', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+.thongtin ul {
+  list-style: none;
+}
+.thongtin i {
+  padding-right: 9px;
+  font-size: 12px;
+}
+.thongtin .email {
+  color:#1fc7a7;
+}
+/*======== Hết CSS phần liên hệ ========*/
 
 /*=======CSS cho di động==========*/
 @media (max-width: 576px) {
