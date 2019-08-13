@@ -69,7 +69,7 @@ body,html {
 .menuphai li.nav-item a.nav-link:hover {color: #1abc9c;}
 .menuphai li.nav-item.active a.nav-link {color: #1abc9c;}
 
-/*=======Hết CSS cho menu ========*/
+/*TODO: Hết CSS cho menu ========*/
 
 /*=======CSS cho di động==========*/
 @media (max-width: 576px) {
