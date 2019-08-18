@@ -154,6 +154,13 @@ body,html {
     padding: 9px 27px;
     margin-top: 22px;
   }
+  /*Thông tin liên hệ trên mobile*/
+  .ttlienhe .thongtin {
+    margin-top: 135px;
+  }
+  .thongtin h1 {
+    font-size: 22px;
+  }
   /*============EndTop==============*/
 
   /*============Menu==============*/
