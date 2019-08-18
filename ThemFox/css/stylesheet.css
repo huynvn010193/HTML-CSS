@@ -65,7 +65,9 @@ body,html {
 /*CSS TOP CHO TRANG CONTACT*/
 
 /*TODO: Bắt đầu CSS cho menu ========*/
-
+.menutren {
+  animation:dixuong 1s forwards;
+}
 .menuphai li.nav-item a.nav-link {
   font-family: 'Lato-Regular', sans-serif;
   color:#a1b1bc;
@@ -82,6 +84,9 @@ body,html {
   background: url(./../images/bg_top.jpg);
   background-size: cover;
   height: 600px;
+  opacity: 0;
+  animation:hienra 2s forwards;
+  animation-delay: 0.4s;
 }
 .ttlienhe .thongtin {
   margin-top: 190px;
@@ -89,6 +94,9 @@ body,html {
   border-left: 3px solid #16caaa;
   color: white;
   padding: 40px;
+  opacity: 0;
+  animation:hienra 2s forwards;
+  animation-delay: 0.4s;
 }
 .thongtin h1 {
   font-family: 'Lato-Regular-Bold', sans-serif;
@@ -111,6 +119,19 @@ body,html {
   color:#1fc7a7;
 }
 /*======== Hết CSS phần liên hệ ========*/
+
+/*TODO: Bắt đầu CSS phần Hiệu ứng ========*/
+@keyframes hienra {
+  from{opacity: 0; transform: translateX(-200px)}
+  to{opacity: 1; transform: translateX(0px)}
+}
+
+@keyframes dixuong {
+  from{opacity: 0; transform: translateY(-200px)}
+  to{opacity: 1; transform: translateY(0px)}
+}
+
+/*======== Kết thúc CSS phần Hiệu ứng ========*/
 
 /*=======CSS cho di động==========*/
 @media (max-width: 576px) {
