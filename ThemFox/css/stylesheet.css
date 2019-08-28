@@ -133,6 +133,38 @@ body,html {
 
 /*======== Kết thúc CSS phần Hiệu ứng ========*/
 
+/*======== CSS phần Liên Hệ ========*/
+.formlienhe {
+  margin-top: 100px;
+}
+
+.formlienhe .txtText {
+  background-color: #f4f6f7;
+  font-family: Lato-Regular-Bold;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.formlienhe .txtText::-webkit-input-placeholder {
+  color:#2c3e50;
+  font-size: 14px;
+}
+
+.formlienhe .c-select {
+  padding: 3px;
+}
+
+.formlienhe .btnGui {
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border-radius:0;
+  width: auto;
+}
+
+/*======== Kết thúc CSS phần Liên Hệ ========*/
+
 /*=======CSS cho di động==========*/
 @media (max-width: 576px) {
 
