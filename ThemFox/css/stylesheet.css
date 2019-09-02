@@ -165,6 +165,39 @@ body,html {
 
 /*======== Kết thúc CSS phần Liên Hệ ========*/
 
+/*======== CSS phần Footer ========*/
+footer {
+  background: #1a1c27;
+  padding-top: 82px;
+  color: #758590;
+  font-family: 'Lato-Regular', sans-serif;
+  font-size: 14px;
+}
+
+a.readmore {
+  color: #1abc9c;
+}
+
+a.readmore:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.readmore i.fa.fa-angle-right {
+  background-color: #1abc9c;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 5px;
+}
+
+
+
+/*======== End CSS phần Footer ========*/
+
 /*=======CSS cho di động==========*/
 @media (max-width: 576px) {
 
