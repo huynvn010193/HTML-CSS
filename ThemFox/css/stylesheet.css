@@ -194,8 +194,9 @@ a.readmore:hover {
   margin-right: 5px;
 }
 
-
-
+.tren {
+  border-bottom: 1px solid #243240;
+}
 /*======== End CSS phần Footer ========*/
 
 /*=======CSS cho di động==========*/
