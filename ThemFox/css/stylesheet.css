@@ -165,15 +165,16 @@ body,html {
 
 /*======== Kết thúc CSS phần Liên Hệ ========*/
 
-/*======== CSS phần Footer ========*/
-footer {
-  background: #1a1c27;
+/*TODO: CSS phần Footer ========*/
+footer .top_footer {
+  background-color: #1a1c27;
   padding-top: 82px;
+  padding-bottom: 82px;
   color: #758590;
   font-family: 'Lato-Regular', sans-serif;
-  font-size: 14px;
 }
 
+/*TODO: Start Css_ Col1_4-----------*/
 a.readmore {
   color: #1abc9c;
 }
@@ -204,9 +205,30 @@ a.readmore:hover {
   padding-top: 28px;
 }
 
-.top_footer .duoi .col-sm-6:nth-child(1) i.fa {
+.top_footer .duoi .rssIcon i.fa {
   background-color: #67b807;
 }
+
+.top_footer .duoi .twitterIcon i.fa {
+  background-color: #1b78c7;
+}
+
+.top_footer .duoi .fbIcon i.fa {
+  background-color: #00bff3;
+}
+
+.top_footer .duoi .ggIcon i.fa {
+  background-color: #67b807;
+}
+
+.top_footer .duoi .pintIcon i.fa {
+  background-color: #a83617;
+}
+
+.top_footer .duoi .dribbbleIcon i.fa {
+  background-color: #9C27B0;
+}
+
 .top_footer .duoi i.fa {
   background-color: #ffb400;
   width: 30px;
@@ -218,6 +240,18 @@ a.readmore:hover {
   margin-top: 5px;
   border-radius: 2px;
 }
+
+.top_footer .duoi b {
+  margin-bottom: -7px;
+  display: block;
+  color: #a1b1bc;
+}
+/*---------- Het Css_ Col1_4-----------*/
+
+/*TODO: Start Css_ Col2_4-----------*/
+
+
+/*-------Het Css_ Col2_4-----------*/
 
 /*======== End CSS phần Footer ========*/
 
