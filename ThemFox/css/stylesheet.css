@@ -197,6 +197,16 @@ a.readmore:hover {
 .tren {
   border-bottom: 1px solid #243240;
 }
+
+.top_footer .duoi i.fa {
+  background-color: #ffb400;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+}
+
 /*======== End CSS phần Footer ========*/
 
 /*=======CSS cho di động==========*/
