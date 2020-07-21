@@ -145,6 +145,7 @@ body,html {
   padding: 15px;
 }
 
+/*Css cho placeholder*/
 .formlienhe .txtText::-webkit-input-placeholder {
   color:#2c3e50;
   font-size: 14px;
@@ -248,14 +249,34 @@ a.readmore:hover {
 }
 /*---------- Het Css_ Col1_4-----------*/
 
-/*TODO: Start Css_ Col2_4-----------*/
+/*TODO: Start Css_ Col2_4: Lastest New-----------*/
+a.tdtin {
+  color: #a1b1bc;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  display: block;
+}
+.mottinf p {
+  font-size: 14px;
+  line-height: 24px;
+}
+.anhtinf img {
+  width: 65px;
+  height: 65px;
+}
+
+span.ngaythangtinf {
+  color: #a1b1bc;
+}
 
 
-/*-------Het Css_ Col2_4-----------*/
+
+/*TODO:Het Css_ Col2_4-----------*/
 
 /*======== End CSS phần Footer ========*/
 
-/*=======CSS cho di động==========*/
+/*TODO: Start:CSS cho di động==========*/
 @media (max-width: 576px) {
 
   /*============PhanTop==============*/
@@ -301,4 +322,6 @@ a.readmore:hover {
   .navbar-brand {text-align: center;}
   .navbar-brand img {height: 80px; margin-top: -10px}
 }
+
+/*TODO:End: CSS cho di động==========*/
 

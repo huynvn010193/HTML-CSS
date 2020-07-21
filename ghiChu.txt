@@ -14,4 +14,7 @@ Flex
 		- baseline: canh theo chữ. thẳng hàng vs nhau.
 		- flex-start: canh theo khối.
 	+ background-size : cover: để ảnh lun full từng loại màn hình khác nhau.
+
++ css cho placeholder:
+--- .formlienhe .txtText::-webkit-input-placeholder
 	
