@@ -250,6 +250,22 @@ a.readmore:hover {
 /*---------- Het Css_ Col1_4-----------*/
 
 /*TODO: Start Css_ Col2_4: Lastest New-----------*/
+h3.tieudef {
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+  margin-bottom: 18px;
+  margin-top:21px;
+  text-transform: uppercase;
+}
+.row.mottinf {
+  border-bottom: 1px solid #243240;
+  padding-top:14px;
+  margin-left:10px;
+}
+.row.mottinf .col-sm-3, .row.mottinf .col-sm-9 {
+  padding: 0px;
+}
 a.tdtin {
   color: #a1b1bc;
   font-size: 14px;
@@ -267,10 +283,9 @@ a.tdtin {
 }
 
 span.ngaythangtinf {
+  display: block;
   color: #a1b1bc;
 }
-
-
 
 /*TODO:Het Css_ Col2_4-----------*/
 
