@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+  <button onclick="showBottomSheet()" id="showBottomSheetBtn">show Bottom sheet</button>
+  <div onclick="hideBottomSheet()" id="bottomSheetContainer">
+    <div id="bottomSheet">
+      <div onclick="handleOnclickMenu(this)" data-value="Edit">Edit</div>
+      <div onclick="handleOnclickMenu(this)" data-value="Delete">Delete</div>
+      <div onclick="handleOnclickMenu(this)" data-value="New">New</div>
+      <div onclick="handleOnclickMenu(this)" data-value="Cancel">Cancel</div>
+    </div>    
+  </div>
+  <script>
+    function showBottomSheet() {
+      let container = document.querySelector("#bottomSheetContainer");
+      let bottomSheet = document.querySelector("#bottomSheetContainer #bottomSheet");
+
+      container.classList.add("active");
+      setTimeout(() => {
+        bottomSheet.classList.add("active");
+      }, 200)
+    }
+
+    function hideBottomSheet() {
+      let container = document.querySelector("#bottomSheetContainer");
+      let bottomSheet = document.querySelector("#bottomSheetContainer #bottomSheet");
+      
+      bottomSheet.classList.remove("active");
+
+      setTimeout(() => {
+        container.classList.remove("active");
+      }, 400)
+    }
+
+    function handleOnclickMenu(ele) {
+      const value = ele.getAttribute('data-value');
+      document.getElementById("showBottomSheetBtn").innerText = value;
+    }
+  </script>
+</body>
+</html>
