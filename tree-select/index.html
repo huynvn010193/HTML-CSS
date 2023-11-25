@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+  </head>
+
+  <style>
+    #childrenContainer {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .childNode {
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid #ddd;
+    }
+    #jstree
+      .jstree-open
+      > .jstree-anchor
+      > .jstree-checkbox; /* .jstree-default > .jstree-container-ul > .jstree-node {
+      display: flex !important;
+    }
+    .jstree .jstree-open > .jstree-children {
+      margin-top: 20px;
+    }
+    .jstree-default .jstree-open > .jstree-anchor {
+      display: none;
+    } */
+  </style>
+
+  <body>
+    <div id="jstree"></div>
+    <div id="childrenContainer"></div>
+  </body>
+
+  <script type="text/javascript">
+    $("#jstree")
+      .jstree({
+        plugins: ["search", "checkbox", "wholerow"],
+
+        core: {
+          data: [
+            {
+              id: "1",
+              text: "Node 1",
+              children: [
+                { text: "Child 1" },
+                { text: "Child 2" },
+                { text: "Child 3" },
+              ],
+            },
+            {
+              text: "Node 2",
+              id: "2",
+              children: [{ text: "Child 4" }, { text: "Child 5" }],
+            },
+          ],
+          animation: false,
+          //'expand_selected_onload': true,
+          themes: {
+            icons: false,
+          },
+        },
+        search: {
+          show_only_matches: true,
+          show_only_matches_children: true,
+        },
+      })
+      .bind("open_node.jstree", function (e, data) {
+        const children = [...data.node.children, ...data.node.id];
+
+        $("#jstree")
+          .find("li")
+          .each(function () {
+            console.log("this", this.id, children);
+            if (children.indexOf(this.id) === -1) {
+              $(this).hide();
+            }
+          });
+
+        // var $tree = $("#myTree").jstree(),
+        //   nodesSelected = $tree.get_selected(),
+        //   nodeIdsToStay = [];
+      })
+      .bind("close_node.jstree", function (e, data) {
+        $("#jstree")
+          .find("li")
+          .each(function () {
+            $(this).show();
+          });
+      });
+
+    $("#childrenContainer").jstree({
+      plugins: ["checkbox"],
+      core: {
+        animation: false,
+        //'expand_selected_onload': true,
+        themes: {
+          icons: false,
+        },
+      },
+    });
+
+    // function displayChildren(selectedNodes) {
+    //   var childrenContainer = $("#childrenContainer");
+    //   childrenContainer.empty(); // Xóa nội dung cũ trước khi hiển thị nội dung mới
+
+    //   selectedNodes.forEach(function (nodeId) {
+    //     var node = $("#jstree").jstree(true).get_node(nodeId);
+    //     var children = node.children;
+
+    //     if (children.length > 0) {
+    //       children.forEach(function (childId) {
+    //         var childNode = $("#jstree").jstree(true).get_node(childId);
+    //         var childText = childNode.text;
+
+    //         // Tạo và hiển thị nút con trong div khác
+    //         var childElement = $(
+    //           '<div class="childNode"><input type="checkbox" value="' +
+    //             childId +
+    //             '"> ' +
+    //             childText +
+    //             "</div>"
+    //         );
+    //         childrenContainer.append(childElement);
+    //       });
+    //     }
+    //   });
+    // }
+
+    // $("#jstree").on("changed.jstree", function (e, data) {
+    //   console.log(data.selected);
+    //   var objects = data.instance.get_selected(true);
+    //   console.log("aaa", objects[0]);
+
+    //   var leaves = $.grep(objects, function (o) {
+    //     return data.instance.is_leaf(o);
+    //   });
+    //   console.log("leaves", leaves);
+    //   var list = $("#output");
+    //   list.empty();
+    //   $.each(leaves, function (i, o) {
+    //     $("<li/>").text(o.text).appendTo(list);
+    //   });
+    // });
+
+    // $("#jstree")
+    //   .jstree(true)
+    //   .bind("open_node.jstree", function (e, data) {
+    //     // $("#jstree").jstree("check_node", "li[selected=selected]");
+    //     console.log("data", data);
+    //   });
+
+    // $("#jstree").on("click", ".jstree-ocl", function (e) {
+    //   // Lấy thông tin về nút mà người dùng đã click
+
+    //   var currentNode = $("#jstree").jstree("get_selected");
+    //   const children = $("#jstree").jstree("get_children_dom", currentNode);
+
+    //   console.log(
+    //     "🚀 ~ file: index.html:131 ~ currentNode:",
+    //     currentNode,
+    //     children
+    //   );
+
+    //   e.stopPropagation();
+
+    //   // console.log("aaa", currentNode);
+    //   // const a = get_children_dom(nodeText);
+
+    //   // $("#childrenContainer").append(nodeText);
+    //   // Để ngăn sự kiện click lan sang các node khác, có thể sử dụng:
+    //   // e.stopPropagation();
+    // });
+  </script>
+</html>

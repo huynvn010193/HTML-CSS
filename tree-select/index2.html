@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* Ẩn các nodes con ban đầu */
+    .tree ul ul {
+      display: none;
+    }
+
+    /* Hiển thị nodes con khi checkbox được chọn */
+    .tree input[type="checkbox"]:checked ~ ul {
+      display: block;
+    }
+
+    /* Tạo các lề thụt để phân biệt các cấp độ nodes */
+    .tree ul ul {
+      margin-left: 20px;
+    }
+
+    /* Tùy chỉnh giao diện của labels và checkboxes */
+    /* ... */
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+  <body>
+    <div class="tree">
+      <ul>
+        <li>
+          <input type="checkbox" id="node1" />
+          <label for="node1">Node 1</label>
+          <ul>
+            <li>
+              <input type="checkbox" id="node1_1" />
+              <label for="node1_1">Node 1.1</label>
+            </li>
+            <li>
+              <input type="checkbox" id="node1_2" />
+              <label for="node1_2">Node 1.2</label>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="node2" />
+          <label for="node2">Node 2</label>
+          <ul>
+            <li>
+              <input type="checkbox" id="node2_1" />
+              <label for="node2_1">Node 2.1</label>
+            </li>
+            <li>
+              <input type="checkbox" id="node2_2" />
+              <label for="node2_2">Node 2.2</label>
+            </li>
+          </ul>
+        </li>
+        <!-- Thêm các nodes và sub-nodes cần thiết khác -->
+      </ul>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      // Xử lý khi thay đổi trạng thái của checkboxes
+      $('.tree input[type="checkbox"]').change(function () {
+        var $this = $(this);
+        var isChecked = $this.prop("checked");
+        var $subNodes = $this.closest("li").find('ul input[type="checkbox"]');
+
+        // Nếu checkbox là cha (có ul con)
+        if ($this.parent().find("ul").length > 0) {
+          // Chọn hoặc bỏ chọn tất cả checkbox con
+          $subNodes.prop("checked", isChecked);
+        } else {
+          // Kiểm tra nếu có checkbox con không được chọn
+          var allChecked = true;
+          console.log("aaaaasas", $subNodes);
+
+          $subNodes.each(function () {
+            if (!$(this).prop("checked")) {
+              console.log("aaaaaaaaaa");
+              allChecked = false;
+              return false; // Thoát khỏi vòng lặp nếu có một checkbox con không được chọn
+            }
+          });
+
+          // Nếu có ít nhất một checkbox con không được chọn, checkbox cha không được chọn
+          if (!allChecked) {
+            console.log(
+              "aaa",
+              $this.closest("ul").prev('input[type="checkbox"]')
+            );
+            $this
+              .closest("ul")
+              .prev('input[type="checkbox"]')
+              .prop("checked", false);
+          }
+        }
+      });
+    });
+  </script>
+</html>

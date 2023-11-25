@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Tree Animation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <style>
+      .jstree-container-ul .jstree-children {
+        display: block;
+        overflow: hidden;
+        transition: width 0.3s ease-out; /* Sử dụng transition để tạo hiệu ứng slide */
+        width: 0;
+        white-space: nowrap; /* Ngăn chặn text bị wrap khi width = 0 */
+      }
+      .jstree-node.open > .jstree-children {
+        width: 100%; /* Hiển thị nút con khi nút cha được mở */
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="jstree"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#jstree").jstree({
+          core: {
+            animation: 100, // Tạo animation với thời gian 100m
+            data: [
+              {
+                id: "1",
+                text: "Node 1",
+                children: [
+                  { text: "Child 1" },
+                  { text: "Child 2" },
+                  { text: "Child 3" },
+                ],
+              },
+              {
+                text: "Node 2",
+                id: "2",
+                children: [{ text: "Child 4" }, { text: "Child 5" }],
+              },
+            ],
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
