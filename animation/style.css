@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+}
+.blue {
+  background-color: blue;
+  transition-property: background-color;
+  transition-duration: 2s; /* Time animation thực thi*/
+  /* transition-delay: 2s; sau 2s mới áp dụng transition-duration */
+  transition-timing-function: ease-in-out; /* hàm tính toán thời điểm đó gtri bao nhiêu */
+}
+.yellow {
+  background-color: yellow;
+}
+.blue:hover {
+  background-color: brown;
+}
